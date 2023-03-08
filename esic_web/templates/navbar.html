@@ -1,21 +1,36 @@
 {% load static %}
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        
-    <a class="navbar-brand" href="/">
-    
-     <img src="{% static 'images/logo_esic.jpeg'%}" alt="Logo" style="width:90px;">
-    </a>
-   <!-- Toggler/collapsibe Button -->
-    <!-- Links -->
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'articles' %}">Articles</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/offres">Offres</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
-    </li>
-</ul>     
-</nav>
+
+<div class="container-navbar">
+    <nav class=""> 
+        <a class="navbar-brand" href="">
+         <img src="{% static 'images/logo_esic.jpeg'%}" alt="Logo" style="width:40px;">
+        </a>
+       <!-- Toggler/collapsibe Button -->
+        <!-- Links -->
+        <ul class="">
+            <li class="">
+                <a class="" href="{% url 'articles' %}">Formations</a>
+            </li>
+            <li class="">
+                <a class="" href="/offres">Actualités</a>
+            </li>
+            <li class="">
+                <a class="" href="/contact">Certifications</a>
+            </li>
+            <li class="">
+                <a class="" href="/contact">Offres/Stages</a>
+            </li>
+            <li class="">
+                <a class="" href="/contact">Nos Étudiants</a>
+            </li>
+        </ul> 
+        <div>
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="">Sign Up</a></li>
+                <li><a class="button" href="">Inscription</a></li>
+            </ul>
+        </div>    
+    </nav>
+</div>
+
