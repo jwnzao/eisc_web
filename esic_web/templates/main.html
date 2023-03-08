@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" href="{% static 'styles/style.css'%}">
+    <script src="{% static 'js/animation.js'%}"></script>
     <title>ESIC Web</title>
 </head>
 <body>
@@ -45,5 +46,15 @@
     <script src="assets/js/headroom.min.js"></script>
     <script src="assets/js/jQuery.headroom.min.js"></script>
     <script src="assets/js/template.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card-container"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".card-container"));
+    </script>
 </body>
+
 </html>
