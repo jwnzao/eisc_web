@@ -81,7 +81,10 @@ def register(request):
             login(request, user)
             return redirect("home")
         else:
-            messages.error(request, "An error occured during registration")
+            messages.error(
+                request,
+                "Le mot de passe doit comporter une minuscule, une majuscule et des chiffres(taille entier sup 6 caractères)",
+            )
     context = {"form": form}
     return render(request, "core/register.html", context)
 
