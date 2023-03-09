@@ -18,6 +18,16 @@ def presentation_page(request):
 
 def formations(request):
     return render(request, "core/formations.html")
+def formationDevelopper(request):
+    return render(request, "core/formationDevelopper.html")
+def businessEngineering(request):
+    return render(request, "core/businessEngineering.html")
+def dataScience(request):
+    return render(request, "core/dataScience.html")
+def cybersecurity(request):
+    return render(request, "core/cybersecurity.html")
+def certifications(request):
+    return render(request, "core/certifications.html")
 
 def temoignages(request):
     return render(request, "core/temoignages.html")
@@ -27,5 +37,6 @@ def evenements(request):
 
 def dates(request):
     return render(request, "core/dates.html")
+
 
 
