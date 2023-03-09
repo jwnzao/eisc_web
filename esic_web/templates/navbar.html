@@ -23,14 +23,19 @@
             <li class="">
                 <a class="" href="{% url 'temoignages' %}">Étudiants</a>
             </li>
-        </ul> 
+        </ul>
+        {% if request.user.is_authenticated %} 
         <div>
-            <ul>
-                <li><a href="">Connexion</a></li>
-            
-                <li><a class="button" href="">Inscription</a></li>
-            </ul>
-        </div>    
+            <p>Bonjour {{request.user}}</p>
+            <a href="{% url 'logout' %}" class="button">Logout</a>
+        </div>
+        {% else %}
+        <ul>
+            <li><a href="{% url 'login'%}">Connexion</a></li>
+        
+            <li><a class="button" href="{% url 'register'%}">Inscription</a></li>
+        </ul>
+        {% endif %}    
     </nav>
 </div>
 

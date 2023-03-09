@@ -1,0 +1,17 @@
+{% extends 'main.html'%};
+{% block content %}
+<div class="form-container-reg">
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        <h3>Inscription</h3>
+        {% for field in form %}
+            <label for="{{field.label}}">{{field.label}}</label>
+            {{field}}
+        {% endfor %}
+        <input type="submit" value="Enregistrer" class="submit">
+    </form>
+    <div class="side">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_uqsv3ztj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+</div>
+{% endblock %}

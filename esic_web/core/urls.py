@@ -1,5 +1,22 @@
 from django.urls import path
-from .views import home_page, articles_page, actualites_page, presentation_page, formations, dates, temoignages, evenements, formationDevelopper, businessEngineering, dataScience, cybersecurity, certifications
+from .views import (
+    home_page,
+    articles_page,
+    actualites_page,
+    presentation_page,
+    formations,
+    dates,
+    temoignages,
+    evenements,
+    formationDevelopper,
+    businessEngineering,
+    dataScience,
+    cybersecurity,
+    certifications,
+    login_page,
+    register,
+    logout_page,
+)
 
 urlpatterns = [
     # path('home/', include('home.urls')),
@@ -8,12 +25,23 @@ urlpatterns = [
     path("actualites", actualites_page, name="actualites"),
     path("presentation", presentation_page, name="presentation"),
     path("formations", formations, name="formations"),
-    path("formations/formation-developper", formationDevelopper, name="formationDevelopper"),
-    path("formations/business-engineering", businessEngineering, name="businessEngineering"),
+    path(
+        "formations/formation-developper",
+        formationDevelopper,
+        name="formationDevelopper",
+    ),
+    path(
+        "formations/business-engineering",
+        businessEngineering,
+        name="businessEngineering",
+    ),
     path("formations/dat-science", dataScience, name="dataScience"),
     path("formations/cybersecurity", cybersecurity, name="cybersecurity"),
     path("formations/certifications", certifications, name="certifications"),
     path("dates", dates, name="dates"),
     path("temoignages", temoignages, name="temoignages"),
     path("evenements", evenements, name="evenements"),
+    path("login", login_page, name="login"),
+    path("register", register, name="register"),
+    path("logout", logout_page, name="logout"),
 ]

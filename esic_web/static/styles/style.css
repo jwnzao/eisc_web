@@ -274,5 +274,87 @@ nav ul li a:hover{
     background: #d25052;
 }
 
+.form-container{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    box-shadow: 15px 15px 20px black;
+}
+.form-container-reg{
+    display: flex;
+    height: 600px;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    box-shadow: 15px 15px 20px black;
+}
+
+.form-container .form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: white;
+
+
+}
+.form-container-reg .form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: white;
+
+
+}
+
+.form h3{
+    font-size: 3rem;
+    margin: 40px;
+
+}
+.form input{
+    padding: 12px;
+    width: 65%;
+    margin: 15px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 20px;
+}
+
+.submit{
+    padding: 12px 30px;
+    width: 40%;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: #9947ff;
+    border: none;
+}
+
+.side{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    background-color: #ea742d;
+    justify-content: center;
+}
+
+.form label{
+    font-size: 1.2rem;
+}
 
 
