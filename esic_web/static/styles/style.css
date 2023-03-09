@@ -39,6 +39,9 @@
     font-size: 15px;
 }
 
+.u-section-1 .u-sheet-1 {
+    min-height: 400px;
+  }
 /* .footer .center .item-container{
     display: flex;
     gap: 50px
