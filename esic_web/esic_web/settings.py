@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-p=r5&a%n2-#&9ibd(pl6m29=ypmjcd*^uqjz&(r_bp6d%$5jbe"
+SECRET_KEY = os.getenv(
+    "SECRET_KEY",
+    default="django-insecure-p=r5&a%n2-#&9ibd(pl6m29=ypmjcd*^uqjz&(r_bp6d%$5jbe",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", default=True)
 
-ALLOWED_HOSTS = []
-
+HOST = os.getenv("ALLOWED_HOSTS")
+if HOST:
+    ALLOWED_HOSTS = [HOST]
+else:
+    ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -123,4 +130,3 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
