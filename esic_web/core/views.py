@@ -79,7 +79,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("core:home")
+            return redirect("home")
         else:
             messages.error(request, "An error occured during registration")
     context = {"form": form}
